@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provincy_cricket_app/screens/home.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -382,6 +383,7 @@ class _LoginState extends State<Login> {
             color: Colors.white,
           ),
         ),
+        onPressed: () => print('Forget clicked'),
       ),
     );
   }
@@ -402,7 +404,13 @@ class _LoginState extends State<Login> {
             fontSize: 18.0,
           ),
         ),
-        onPressed: () => print("Login Clicked"),
+        onPressed: () => {
+          print("Login Clicked"),
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          ),
+        },
       ),
     );
   }
