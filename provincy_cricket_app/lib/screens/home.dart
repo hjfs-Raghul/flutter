@@ -41,13 +41,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
           'Home',
           style: TextStyle(color: Colors.cyan),
         ),
-      ),
+      ),*/
       body: _displayPage,
       bottomNavigationBar: CurvedNavigationBar(
         index: currentIdx,

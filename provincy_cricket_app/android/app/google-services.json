@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "358028032457",
+    "firebase_url": "https://provincial-cricket-app.firebaseio.com",
+    "project_id": "provincial-cricket-app",
+    "storage_bucket": "provincial-cricket-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358028032457:android:cf71287763f09e762d9018",
+        "android_client_info": {
+          "package_name": "com.example.provincy_cricket_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358028032457-8aeak4a9e8ugv3g25cd1rt8pbpaf7a2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz9Nlne-KV6NLwfI5JLgV14PZp2Hkeh2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358028032457-8aeak4a9e8ugv3g25cd1rt8pbpaf7a2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

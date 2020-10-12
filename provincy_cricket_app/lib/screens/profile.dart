@@ -35,7 +35,7 @@ class _ProfileState extends State<Profile> {
                   ),
                 ),
                 WidgetSpan(
-                  child: Icon(Icons.open_in_new, size: 19),   //TODO chaneg icon
+                  child: Icon(Icons.open_in_new, size: 19),   //TODO change icon
                 ),
               ],
             ),
