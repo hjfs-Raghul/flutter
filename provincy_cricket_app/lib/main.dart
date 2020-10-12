@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+import 'package:provincy_cricket_app/providers/Auth.dart';
 import 'package:provincy_cricket_app/screens/ErrorScreen.dart';
 import 'package:provincy_cricket_app/screens/login.dart';
 import 'package:provincy_cricket_app/model/Player.dart';
 
 void main() {
-  /*final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-   MaterialApp(
-       home: FutureBuilder(
-        future: _initialization,
-        builder: (context,snapshot) {
-          if(snapshot.hasError)
-            return ErrorScreen("Snap Error" +snapshot.error.toString());
-          if (snapshot.connectionState == ConnectionState.done) {*/
-  runApp(MyApp());
-  /* }
-          return Container();
-        }
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(
+            value: Auth()
+        ),
+      ],
+      child:  MyApp(),
     ),
-  );*/
+  );
 }
 
 class MyApp extends StatelessWidget {

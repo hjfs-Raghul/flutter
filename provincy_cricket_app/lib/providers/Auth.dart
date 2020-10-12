@@ -7,16 +7,16 @@ class Auth with ChangeNotifier {
   DateTime _expiryDate;
   String _userId;
 
-  Future<void> SignUp(String mail , String password) async{
-    const SignupUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAz9Nlne-KV6NLwfI5JLgV14PZp2Hkeh2c";
+  Future<void> SignUpWithMail(String mail , String password) async{
+    const signUpUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAz9Nlne-KV6NLwfI5JLgV14PZp2Hkeh2c";
 
-    final response = await http.post(SignupUrl,body: json.encode({
+    final response = await http.post(signUpUrl,body: json.encode({
       'email':mail,
       'password':password,
       'returnSecureToken':true,
     }));
 
-    print("Respone --->" + json.decode(response.body));
+    print("Response --->" + json.decode(response.body).toString());
 
 
   }
