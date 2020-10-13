@@ -1,9 +1,8 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provincy_cricket_app/providers/Auth.dart';
 import 'package:provincy_cricket_app/screens/home.dart';
+import 'package:provider/provider.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -405,7 +404,14 @@ class _LoginState extends State<Login> {
           ),
         ),
         onPressed: () => {
-          print("Login Clicked"),
+          if (isLogin)
+            {
+              print("Login Clicked"),
+            }
+          else
+            {
+              _signUpProcess(),
+            },
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => HomePage()),
@@ -413,6 +419,10 @@ class _LoginState extends State<Login> {
         },
       ),
     );
+  }
+
+  _signUpProcess() async{
+    await Provider.of<Auth>(context,listen: false).SignUpWithMail("thaku5698@gmail.com", "12345678");
   }
 
   Widget buildLoginSignUpLink() {

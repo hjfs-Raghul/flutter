@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 // import 'package:provincy_cricket_app/model/profile.dart';
@@ -36,7 +35,7 @@ class _ProfileState extends State<Profile> {
                   ),
                 ),
                 WidgetSpan(
-                  child: Icon(Icons.sports_cricket, size: 19),
+                  child: Icon(Icons.open_in_new, size: 19),   //TODO change icon
                 ),
               ],
             ),
@@ -199,7 +198,7 @@ class DetailCard extends StatelessWidget {
     return Card(
       child: Container(
         child: ListTile(
-          tileColor: Colors.greenAccent,
+          //tileColor: Colors.greenAccent,
           title: Text(
             "$info",
             style: TextStyle(fontSize: height * 0.04),

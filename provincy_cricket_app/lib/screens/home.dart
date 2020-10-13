@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:provincy_cricket_app/screens/ChatScreen.dart';
 import 'package:provincy_cricket_app/screens/feed.dart';
 import 'package:provincy_cricket_app/screens/search.dart';
 import 'package:provincy_cricket_app/screens/add.dart';
@@ -26,6 +27,9 @@ class _HomePageState extends State<HomePage> {
         return AddMatch();
         break;
       case 4:
+        return ChatScreen();
+        break;
+      case 5:
         return Profile();
         break;
       default:
@@ -37,6 +41,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          'Home',
+          style: TextStyle(color: Colors.cyan),
+        ),
+      ),*/
       body: _displayPage,
       bottomNavigationBar: CurvedNavigationBar(
         index: currentIdx,
@@ -51,7 +62,17 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
           ),
           Icon(
-            Icons.date_range_outlined,
+            Icons.search, //TODO change icon
+            size: 20,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.add_box, //TODO change icon
+            size: 20,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.chat,
             size: 20,
             color: Colors.white,
           ),
