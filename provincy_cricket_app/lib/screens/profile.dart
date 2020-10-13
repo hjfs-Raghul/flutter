@@ -64,7 +64,42 @@ class _ProfileState extends State<Profile> {
             },
           ),
           body: Container(
-            child: Column(
+            child: Hero(
+              tag: "assets/images/google_logo.png",
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () => {
+                    Scaffold.of(context).showBottomSheet<void>(
+                      (BuildContext context) {
+                        return Container(
+                          height: 200,
+                          color: Colors.amber,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                const Text('BottomSheet'),
+                                ElevatedButton(
+                                  child: const Text('Close BottomSheet'),
+                                  onPressed: () => Navigator.pop(context),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  },
+                  child: Image.asset(
+                    "assets/images/fb_logo.png",
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+            /* Column(
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(10.0),
@@ -140,7 +175,7 @@ class _ProfileState extends State<Profile> {
                   isEditable: true,
                 ),
               ],
-            ),
+            ), */
           ),
         ),
       ),

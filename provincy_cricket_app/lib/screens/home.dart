@@ -37,13 +37,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
-          'Home',
-          style: TextStyle(color: Colors.cyan),
-        ),
-      ),
       body: _displayPage,
       bottomNavigationBar: CurvedNavigationBar(
         index: currentIdx,
@@ -59,6 +52,11 @@ class _HomePageState extends State<HomePage> {
           ),
           Icon(
             Icons.date_range_outlined,
+            size: 20,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.person_outline,
             size: 20,
             color: Colors.white,
           ),
